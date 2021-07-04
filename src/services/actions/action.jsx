@@ -1,10 +1,14 @@
-import constants from "../constants";
+import * as Constants from "../constants";
 
-export default addToCart = (data) =>{
+export const addToCart = (data) =>{
     return{
-        type: constants.ADD_TO_CART,
+        type: Constants.ADD_TO_CART,
         data:data
     }
 }
 
-
+export const removeToCart =() => {
+    return({
+        type: Constants.REMOVE_TO_CART
+    })
+}
