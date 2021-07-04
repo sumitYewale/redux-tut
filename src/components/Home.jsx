@@ -1,32 +1,21 @@
 import React from 'react'
 
-function Home() {
+function Home(props) {
     return (
         <div>
-            <div className="header">
-                <div className="cart-item-store" >
-                    <div className="cart-container">
-                        <div className="cart-icon">
-                            <img src="https://thumbs.dreamstime.com/b/shopping-cart-icon-vector-sale-shopping-cart-icon-vector-170609053.jpg" />
-                        </div>
-                        <div className="cart-count">
-                            2
-                        </div>
-                    </div>
-                </div>
-            </div>
             <h1>Products</h1>
             <div className="cart-wrapper">
                 <div className="product-container">
                     <div className="img-wrapper item">
-                        <img src="https://www.pngitem.com/pimgs/m/525-5259250_apple-ios-13-iphone-hd-png-download-apple.png" />
+                        <img src="https://www.pngitem.com/pimgs/m/525-5259250_apple-ios-13-iphone-hd-png-download-apple.png" alt="2" />
                     </div>
                     <div className="text-wrapper item">
-                        <span>I-Phone</span>
+                        <span>IPhone 11</span>
                         <span>Price: $1000.00</span>
                     </div>
                     <div className="btn-wrapper item">
-                        <button>Add To Cart</button>
+                        <button onClick={() => props.addToCartHandler({price:1000, name:'Iphone 11'})} >+</button>
+                        <button onClick={() => props.removeToCartHandler()} >-</button>
                     </div>
                 </div>
             </div>
